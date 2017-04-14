@@ -80,12 +80,31 @@ h1, h2, h3, h4, h5, h6 {
 
 // Custom Navigation Bar
 
+#mainNav  {
+  max-height: 70px;
+}
+
+
+
+.navbar-brand {
+    position:relative;
+    padding: 0;
+    font-size: 18px;
+    line-height: 20px;
+    top: -30px;
+    left: -15px;
+    width: 150px;
+    height: 180px;
+    box-shadow: 4px 4px 2px #222;
+}
+
 .navbar-custom {
+
     background-color: @gray-darker;
     border-color: transparent;
     .navbar-brand {
         color: @theme-primary;
-        .script-font;
+        .heading-font;
         &:hover,
         &:focus,
         &:active,
@@ -94,17 +113,19 @@ h1, h2, h3, h4, h5, h6 {
         }
     }
     .navbar-collapse {
+        position: relative;
+
         border-color: fade(white, 2%);
     }
     .navbar-toggle {
         background-color: @theme-primary;
         border-color: @theme-primary;
         .heading-font;
-        color: white;
+        color: @theme-primary;
         font-size: 12px;
         &:hover,
         &:focus {
-            background-color: @theme-primary;
+            background-color: white;
         }
     }
     .nav {
@@ -156,18 +177,27 @@ h1, h2, h3, h4, h5, h6 {
 
 // Navbar Change on Scroll
 
+
 @media(min-width:768px) {
     .navbar-custom.affix {
         background-color: @gray-darker;
         padding: 10px 0;
         .navbar-brand {
             font-size: 1.5em;
+            width:115px;
+            height:143px;
+            top:-10px;
+          .logo_overlay {
+            width:115px;
+            height:143px;
+            padding-top: 113px;
+          }
         }
     }
 }
 
 header {
-    background-image: url('../img/header-bg.jpg');
+    background-image: url('../img/header-bg2.png');
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center center;
@@ -177,19 +207,27 @@ header {
     .intro-text {
         padding-top: 100px;
         padding-bottom: 50px;
-        .intro-lead-in {
-            .serif-font;
-            font-style: italic;
-            font-size: 22px;
-            line-height: 22px;
-            margin-bottom: 25px;
-        }
-        .intro-heading {
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        .intro-heading-box {
+          background:rgba(1,1,1,0.5);
+          padding: 35px;
+          .intro-heading {
             .heading-font;
-            font-weight: 700;
-            font-size: 50px;
-            line-height: 50px;
-            margin-bottom: 25px;
+              letter-spacing: .6em;
+              font-weight: 700;
+              font-size: 50px;
+              line-height: 50px;
+              margin-bottom: 25px;
+            }
+            .intro-lead-in {
+              .serif-font;
+              letter-spacing: 0.25em;
+              font-size: 22px;
+              line-height: 22px;
+              margin-bottom: 25px;
+            }
         }
     }
 }
@@ -201,7 +239,7 @@ header {
             padding-bottom: 200px;
             .intro-lead-in {
                 .serif-font;
-                font-style: italic;
+
                 font-size: 40px;
                 line-height: 40px;
                 margin-bottom: 25px;
@@ -217,6 +255,22 @@ header {
     }
 }
 
+.logo_overlay {
+    background-image: url(../img/logos/circles_logo.jpg);
+    background-size: 100%;
+    position: relative;
+    width: 150px;
+    height: 180px;
+    //background-color: #fff;
+    //top: -30px;
+    //left: -15px;
+    z-index: -1;
+    border-bottom: 30px solid white;
+    padding-top: 150px;
+    padding-left: 13px;
+}
+
+
 // Global Section Styles
 
 section {
@@ -230,9 +284,9 @@ section {
         font-size: 16px;
         .serif-font;
         text-transform: none;
-        font-style: italic;
         font-weight: 400;
         margin-bottom: 75px;
+        line-height: 1.6em;
     }
 }
 
@@ -288,8 +342,8 @@ section {
                     h4 {
                         margin: 0;
                     }
-                }                
-            }            
+                }
+            }
         }
         .portfolio-caption {
             max-width: 400px;
@@ -574,7 +628,7 @@ section#contact {
        font-weight: 700;
        color: @gray-lighter;
     }
-    :-ms-input-placeholder {  
+    :-ms-input-placeholder {
        .heading-font;
        font-weight: 700;
        color: @gray-lighter;
@@ -704,8 +758,8 @@ ul.social-buttons {
                 -webkit-transform: rotate(90deg);
                 /* Safari and Chrome */
                 z-index:1052;
-            }            
-        }        
+            }
+        }
     }
     .modal-backdrop {
         opacity: 0;
