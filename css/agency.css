@@ -150,15 +150,14 @@ fieldset[disabled] .btn-xl.active {
   max-height: 70px;
 }
 .navbar-brand {
+  background-image: url(../img/logos/logo.png);
+  background-size: 100%;
   position: relative;
-  padding: 0;
-  font-size: 18px;
-  line-height: 20px;
+  margin-left: : 0px !important;
   top: -30px;
-  left: -15px;
   width: 150px;
-  height: 180px;
-  box-shadow: 4px 4px 2px #222;
+  height: 175px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 .navbar-custom {
   background-color: #222222;
@@ -240,13 +239,9 @@ fieldset[disabled] .btn-xl.active {
   .navbar-custom.affix .navbar-brand {
     font-size: 1.5em;
     width: 115px;
-    height: 143px;
+    height: 134px;
     top: -10px;
-  }
-  .navbar-custom.affix .navbar-brand .logo_overlay {
-    width: 115px;
-    height: 143px;
-    padding-top: 113px;
+    margin-left: 18px !important;
   }
 }
 header {
@@ -290,8 +285,8 @@ header .intro-text .intro-heading-box .intro-lead-in {
 }
 @media (min-width: 768px) {
   header .intro-text {
-    padding-top: 300px;
-    padding-bottom: 200px;
+    padding-top: 150px;
+    padding-bottom: 100px;
   }
   header .intro-text .intro-lead-in {
     font-family: "Exo", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -307,17 +302,6 @@ header .intro-text .intro-heading-box .intro-lead-in {
     line-height: 75px;
     margin-bottom: 50px;
   }
-}
-.logo_overlay {
-  background-image: url(../img/logos/circles_logo.jpg);
-  background-size: 100%;
-  position: relative;
-  width: 150px;
-  height: 180px;
-  z-index: -1;
-  border-bottom: 30px solid white;
-  padding-top: 150px;
-  padding-left: 13px;
 }
 section {
   padding: 100px 0;
